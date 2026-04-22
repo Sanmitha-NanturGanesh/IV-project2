@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Visualization System</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <main class="page">
+    <h1>Car Visualization System</h1>
+    <p class="intro">
+      This interactive D3.js system explores the a1-cars dataset using multiple coordinated visualizations.
+      Use the filters below, then brush over the scatter plot to update the other views.
+    </p>
+
+    <section class="controls">
+      <label for="originFilter">Origin:</label>
+      <select id="originFilter">
+        <option value="All">All</option>
+        <option value="American">American</option>
+        <option value="European">European</option>
+        <option value="Japanese">Japanese</option>
+      </select>
+
+      <label for="cylFilter">Cylinders:</label>
+      <select id="cylFilter">
+        <option value="All">All</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+      </select>
+
+      <button id="resetBrush">Reset Selection</button>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Scatter Plot – Weight vs MPG</h2>
+        <p>Color represents origin and point size represents horsepower.</p>
+        <div id="scatter"></div>
+      </div>
+
+      <div class="card">
+        <h2>Line Chart – Average MPG by Model Year</h2>
+        <p>Shows the trend of average fuel efficiency over time.</p>
+        <div id="line"></div>
+      </div>
+
+      <div class="card">
+        <h2>Bar Chart – Average MPG by Origin</h2>
+        <p>Compares average fuel efficiency across regions.</p>
+        <div id="bar"></div>
+      </div>
+
+      <div class="card">
+        <h2>Box Plot – MPG Distribution by Origin</h2>
+        <p>Shows distribution, median, and spread of MPG values.</p>
+        <div id="box"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+.page {
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 20px 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.intro {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  background: white;
+  padding: 14px 16px;
+  border: 1px solid #d9e1ea;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.controls label {
+  font-weight: 600;
+}
+
+.controls select,
+.controls button {
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.controls button {
+  background: #1a5fb4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #144b90;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(420px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d9e1ea;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.card p {
+  margin-top: 6px;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+svg {
+  display: block;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  background: white;
+  border: 1px solid #999;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.axis-label {
+  font-size: 14px;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.selected-point {
+  stroke: #111;
+  stroke-width: 1.5;
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
