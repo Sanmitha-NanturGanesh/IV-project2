@@ -13,7 +13,7 @@ const colorScale = d3.scaleOrdinal()
 
 const sizeScale = d3.scaleSqrt().range([4, 12]);
 
-d3.csv("data/a1-cars.csv").then(data => {
+d3.csv("a1-cars.csv").then(data => {
   data.forEach(d => {
     d.MPG = +d.MPG;
     d.Cylinders = +d.Cylinders;
